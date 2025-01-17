@@ -58,7 +58,7 @@ header {
 
 .menu-popup ul {
   list-style: circle;
-  margin: 10px;
+  margin: 5px;
   padding: 10px;
 }
 
@@ -166,5 +166,56 @@ footer {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* For tablets and small devices */
+  header {
+    font-size: 14px;
+    padding: 2px;
+  }
+
+  .menu-popup {
+    width: 50%;
+    top: 60px;
+    font-size: 12px; /* Smaller font for menu items */
+  }
+
+  .App-fullogo {
+    height: 8vmin;
+  }
+
+  .App-smallogo {
+    max-width: 70%;
+  }
+
+  .rotating-images {
+    height: 60vh; /* Smaller image area */
+  }
+}
+
+@media (max-width: 480px) { /* For small phones */
+  .hamburger-icon .line {
+    width: 20px;
+    height: 2px;
+  }
+
+  .menu-popup {
+    font-size: 10px; /* Smaller font for very small screens */
+    top: 35px;
+  }
+
+  .App-smallogo {
+    max-width: 60%;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 5px 0;
+  }
+
+  .phone-link, .instagram-link, .email-link {
+    font-size: 18px;
   }
 }
