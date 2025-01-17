@@ -1,0 +1,170 @@
+body{
+  background-color: #F1E3CB;
+}
+
+.App-fullogo {
+  height: 5vmin;
+  pointer-events: none;
+  border-radius: 20vmax;
+  margin-left: auto;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-fullogo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+header {
+  text-align: left;
+  background-color: #E8E6CD;
+  display: flex;
+  align-items: center;
+  font-size: calc(14px);
+  color: #734C2B;
+}
+
+.hamburger-menu {
+  cursor: pointer;
+  margin-right: auto; /* Push hamburger menu to the far left */
+  margin-left: 3px;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-icon .line {
+  width: 30px;
+  height: 5px;
+  background-color: #734C2B;
+  border-radius: 2px;
+}
+
+.menu-popup {
+  position: absolute;
+  top: 53px;
+  left: 3px;
+  background-color: #E8E6CD;
+  border-radius: 9px;
+  box-shadow: 15px 15px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 100;
+}
+
+.menu-popup ul {
+  list-style: circle;
+  margin: 10px;
+  padding: 10px;
+}
+
+.menu-popup ul li {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.menu-popup ul li:hover {
+  background-color: #F1E3CB;
+  border-radius: 20px;
+}
+
+.App-webpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontally centers child elements */
+  justify-content: flex-start; /* Adjusts vertical alignment */
+}
+
+footer {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.instagram-link {
+  color: #E1306C;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.instagram-link:hover {
+  color: #C13584; /* Darker shade on hover */
+}
+
+/* Small Logo Container */
+.App-smallogo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* Small Logo Styling */
+.App-smallogo {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Rotating Images Container */
+.rotating-images {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 80vh; /* Full viewport height */
+}
+
+/* Coffee Bags Image */
+.App-bags {
+  margin-top: 20px;
+  max-width: 70%; /* Adjust the size as needed */
+  height: auto;
+  box-shadow: 18px 18px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+}
+
+.phone-link {
+  color: #34a853; /* Instagram's color */
+  font-size: 21px; /* Icon size */
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.phone-link:hover {
+  color: #246e38; /* Darker shade on hover */
+}
+
+.instagram-link {
+  color: #E1306C; /* Instagram's color */
+  font-size: 24px; /* Icon size */
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.instagram-link:hover {
+  color: #922964; /* Darker shade on hover */
+}
+
+.email-link {
+  color: #4285f4; /* Instagram's color */
+  font-size: 24px; /* Icon size */
+  text-decoration: none;
+}
+
+.email-link:hover {
+  color: #20437a; /* Darker shade on hover */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
