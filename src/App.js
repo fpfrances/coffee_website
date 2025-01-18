@@ -1,21 +1,22 @@
 import './App.css';
 import fullogo from './assets/full_logo.jpg'; // Adjust the image path as needed
 import smallogo from './assets/small_logo.jpg'; // Adjust the image path as needed
-import coffeebags from './assets/coffeebags.jpg'; // Adjust the image path as needed
-import coffee_bag from './assets/coffee_bag.jpg'; // Adjust the image path as needed
-import coffee_bag2 from './assets/coffee_bag2.jpg'; // Adjust the image path as needed
+import coffee1 from './assets/main_coffee1.jpg'; // Adjust the image path as needed
+import coffee2 from './assets/main_coffee2.jpg'; // Adjust the image path as needed
+import coffee3 from './assets/main_coffee3.jpg'; // Adjust the image path as needed
+import coffee4 from './assets/main_coffee4.jpg'; // Adjust the image path as needed
 import React, { useState, useEffect } from 'react';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(coffeebags); // State to store the current image
+  const [currentImage, setCurrentImage] = useState(coffee1); // State to store the current image
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
   // Array of image sources
-  const images = [coffeebags, coffee_bag, coffee_bag2];
+  const images = [coffee1, coffee2, coffee3, coffee4];
 
   // Function to rotate images
   const rotateImages = () => {
