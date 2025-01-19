@@ -169,21 +169,26 @@ footer {
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) { /* For tablets and small devices */
-  header {
-    font-size: 14px;
-    padding: 2px;
+@media (min-width: 320px) and (max-width: 435px) { /* For phones */
+  .hamburger-icon .line {
+    width: 23px;
+    height: 2px;
   }
 
   .menu-popup {
     width: 50%;
-    top: 60px;
-    font-size: 12px; /* Smaller font for menu items */
+    font-size: 11px; /* Smaller font for very small screens */
+    top: 34px;
   }
 
   .App-fullogo {
-    height: 8vmin;
+    height: 10vmin;
+  }
+
+  .App-smallogo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
   }
 
   .App-smallogo {
@@ -191,31 +196,53 @@ footer {
   }
 
   .rotating-images {
-    height: 60vh; /* Smaller image area */
+    height: 50vh; /* Smaller image area */
+  }
+
+  footer {
+    padding: 5px;
+  }
+
+  .phone-link, .instagram-link, .email-link {
+    font-size: 25px;
   }
 }
 
-@media (max-width: 480px) { /* For small phones */
+@media (min-width: 768px) and (max-width: 1024px) { /* For tablets */
   .hamburger-icon .line {
-    width: 20px;
+    width: 23px;
     height: 2px;
   }
 
   .menu-popup {
-    font-size: 10px; /* Smaller font for very small screens */
-    top: 35px;
+    width: 30%;
+    font-size: 12px; /* Smaller font for very small screens */
+    top: 40px;
+  }
+
+  .App-fullogo {
+    height: 5vmin;
+  }
+
+  .App-smallogo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
   }
 
   .App-smallogo {
     max-width: 60%;
   }
 
+  .rotating-images {
+    height: 70vh; /* Smaller image area */
+  }
+
   footer {
-    font-size: 0.8em;
-    padding: 5px 0;
+    padding: 5px;
   }
 
   .phone-link, .instagram-link, .email-link {
-    font-size: 18px;
+    font-size: 25px;
   }
 }

@@ -1,12 +1,12 @@
 import './App.css';
-import fullogo from './assets/full_logo.jpg'; // Adjust the image path as needed
-import smallogo from './assets/small_logo.jpg'; // Adjust the image path as needed
-import coffee1 from './assets/main_coffee1.jpg'; // Adjust the image path as needed
-import coffee2 from './assets/main_coffee2.jpg'; // Adjust the image path as needed
-import coffee3 from './assets/main_coffee3.jpg'; // Adjust the image path as needed
-import coffee4 from './assets/main_coffee4.jpg'; // Adjust the image path as needed
+// Adjust the image path as needed
+import fullogo from './assets/full_logo.jpg';
+import smallogo from './assets/small_logo.jpg';
+import coffee1 from './assets/main_coffee1.jpg';
+import coffee2 from './assets/main_coffee2.jpg';
+import coffee3 from './assets/main_coffee3.jpg';
+import coffee4 from './assets/main_coffee4.jpg';
 import React, { useState, useEffect } from 'react';
-
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState(coffee1); // State to store the current image
