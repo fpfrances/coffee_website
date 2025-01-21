@@ -25,7 +25,7 @@ function Inicial() {
 
     // Cleanup the interval on component unmount
     return () => clearInterval(interval);
-  }, []);
+  },);
 
   return (
     <div>

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // Import Page Components
 import Inicial from './pages/home';
 import Cafes from './pages/types';
-import Historia from './pages/about';
+import Missao from './pages/about';
 import Pedidos from './pages/orders';
 import Contatos from './pages/contact';
 
@@ -36,7 +36,8 @@ function App() {
           {menuOpen && (
             <div className="menu-popup">
               <ul>
-                <li><Link to="/about" onClick={handleMenuToggle}><b>Nossa História</b></Link></li>
+                <li><Link to="/home" onClick={handleMenuToggle}><b>Pagina Inicial</b></Link></li>
+                <li><Link to="/about" onClick={handleMenuToggle}><b>Nossa Missao</b></Link></li>
                 <li><Link to="/types" onClick={handleMenuToggle}><b>Tipos de Café</b></Link></li>
                 <li><Link to="/orders" onClick={handleMenuToggle}><b>Pedidos</b></Link></li>
                 <li><Link to="/contact" onClick={handleMenuToggle}><b>Contatos</b></Link></li>
@@ -58,8 +59,9 @@ function App() {
           {/* Page Routes */}
           <Routes>
             <Route path="/" element={<Inicial />} /> {/* Root route for main page */}
+            <Route path="/home" element={<Inicial />} />
             <Route path="/types" element={<Cafes />} />
-            <Route path="/about" element={<Historia />} />
+            <Route path="/about" element={<Missao />} />
             <Route path="/orders" element={<Pedidos />} />
             <Route path="/contact" element={<Contatos />} />
           </Routes>
