@@ -1,0 +1,79 @@
+.contatos-container {
+    margin-top: 40px;
+    width: 40%;
+    padding: 40px;
+    background-color: #E8E6CD;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    margin-top: 0px;
+    text-align: center;
+    color: #734C2B;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #734C2B;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+  }
+  
+  .contact-form .send-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #734C2B;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .contact-form .send-button:hover {
+    background-color: #8a725f;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contatos-container {
+      padding: 15px;
+      width: 75%;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 14px;
+    }
+  
+    .contact-form .send-button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }

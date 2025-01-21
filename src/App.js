@@ -1,79 +1,68 @@
 import './App.css';
-// Adjust the image path as needed
-import fullogo from './assets/full_logo.jpg';
-import smallogo from './assets/small_logo.jpg';
-import coffee1 from './assets/main_coffee1.jpg';
-import coffee2 from './assets/main_coffee2.jpg';
-import coffee3 from './assets/main_coffee3.jpg';
-import coffee4 from './assets/main_coffee4.jpg';
-import React, { useState, useEffect } from 'react';
+import Fullogo from './assets/full_logo.jpg';
+import Smallogo from './assets/small_logo.jpg';
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+
+// Import Page Components
+import Inicial from './pages/home';
+import Cafes from './pages/types';
+import Historia from './pages/about';
+import Pedidos from './pages/orders';
+import Contatos from './pages/contact';
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentImage, setCurrentImage] = useState(coffee1); // State to store the current image
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
 
-  // Array of image sources
-  const images = [coffee1, coffee2, coffee3, coffee4];
-
-  // Function to rotate images
-  const rotateImages = () => {
-    setCurrentImage(prevImage => {
-      const currentIndex = images.indexOf(prevImage);
-      const nextIndex = (currentIndex + 1) % images.length;
-      return images[nextIndex];
-    });
-  };
-
-  // Rotate images every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(rotateImages, 5000);
-
-    // Cleanup the interval on component unmount
-    return () => clearInterval(interval);
-  },);
-
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* Hamburger Menu */}
-        <div className="hamburger-menu" onClick={handleMenuToggle}>
-          <div className="hamburger-icon">
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          {/* Hamburger Menu */}
+          <div className="hamburger-menu" onClick={handleMenuToggle}>
+            <div className="hamburger-icon">
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+              <div className="line"></div>
+            </div>
           </div>
-        </div>
 
-        {/* Popup Menu */}
-        {menuOpen && (
-          <div className="menu-popup">
-            <ul>
-              <li><b>Tipos de Café</b></li>
-              <li><b>Nossa História</b></li>
-              <li><b>Pedidos</b></li>
-              <li><b>Contatos</b></li>
-            </ul>
+          {/* Popup Menu */}
+          {menuOpen && (
+            <div className="menu-popup">
+              <ul>
+                <li><Link to="/about" onClick={handleMenuToggle}><b>Nossa História</b></Link></li>
+                <li><Link to="/types" onClick={handleMenuToggle}><b>Tipos de Café</b></Link></li>
+                <li><Link to="/orders" onClick={handleMenuToggle}><b>Pedidos</b></Link></li>
+                <li><Link to="/contact" onClick={handleMenuToggle}><b>Contatos</b></Link></li>
+              </ul>
+            </div>
+          )}
+
+          {/* Full Logo */}
+          <img src={Fullogo} className="App-fullogo" alt="Full Logo" />
+        </header>
+
+        {/* Webpage Content */}
+        <div className="App-webpage">
+          <div className="App-smallogo-container">
+            {/* Small Logo */}
+            <img src={Smallogo} className="App-smallogo" alt="Small Logo" />
           </div>
-        )}
 
-        {/* Full Logo */}
-        <img src={fullogo} className="App-fullogo" alt="Full Logo" />
-      </header>
-
-      {/* Webpage Content */}
-      <div className="App-webpage">
-        <div className="App-smallogo-container">
-          {/* Small Logo */}
-          <img src={smallogo} className="App-smallogo" alt="Small Logo" />
-        </div>
-        
-        {/* Rotating Images */}
-        <div className="rotating-images">
-          <img src={currentImage} className="App-bags" alt="Coffee Bag" />
+          {/* Page Routes */}
+          <Routes>
+            <Route path="/" element={<Inicial />} /> {/* Root route for main page */}
+            <Route path="/types" element={<Cafes />} />
+            <Route path="/about" element={<Historia />} />
+            <Route path="/orders" element={<Pedidos />} />
+            <Route path="/contact" element={<Contatos />} />
+          </Routes>
         </div>
 
         {/* Footer */}
@@ -94,7 +83,7 @@ function App() {
           </a>
         </footer>
       </div>
-    </div>
+    </Router>
   );
 }
 
