@@ -4,6 +4,7 @@ import './contacts.css';
 function Contatos() {
   const [formData, setFormData] = useState({
     fullName: '',
+    email: '',
     subject: '',
     message: '',
   });
@@ -34,12 +35,12 @@ function Contatos() {
           required
         />
 
-        <label htmlFor="subject">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           type="text"
-          id="subject"
-          name="subject"
-          value={formData.subject}
+          id="email"
+          name="email"
+          value={formData.email}
           onChange={handleChange}
           placeholder="Escreva seu email de contato"
           required
