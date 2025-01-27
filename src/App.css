@@ -111,12 +111,50 @@ footer {
   border-radius: 10px; /* Optional rounded corners */
 }
 
-/* Rotating Images Container */
-.rotating-images {
+/* Container to arrange the rotating image and message side by side */
+.container {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  height: 80vh; /* Full viewport height */
+  align-items: center; /* Center vertically */
+  position: absolute; /* Use absolute positioning to position the container */
+  top: 50%; /* Position the container in the middle of the screen vertically */
+  left: 50%; /* Position the container in the middle of the screen horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true centering */
+  width: 90%; /* Optional: Control the width of the container */
+  height: 50vh; /* Optional: Control the height of the container */
+  text-align: center; /* Align text to the center */
+}
+
+/* Rotating images container with height adjustment */
+.rotating-images {
+  flex: 5;
+  height: 65vh; /* Set the height of the rotating image area */
+}
+
+/* Image styling to fit the container */
+.rotating-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+/* Message container */
+.message-container {
+  flex: 3;
+  margin-right: 150px;
+}
+
+/* Optional: Adjust text styling */
+.message-container h2 {
+  font-size: 30px;
+  color: #734C2B;
+  margin-bottom: 40px;
+}
+
+.message-container p {
+  font-size: 20px;
+  color: #734C2B;
+  line-height: 1.6; /* Improve line spacing for readability */
+  word-wrap: break-word; /* Ensure text doesn't overflow */
 }
 
 /* Coffee Bags Image */
@@ -129,7 +167,7 @@ footer {
 }
 
 .phone-link {
-  color: #34a853; /* Instagram's color */
+  color: #34a853; /* Phone's color */
   font-size: 21px; /* Icon size */
   text-decoration: none;
   padding-right: 20px;
@@ -151,13 +189,24 @@ footer {
 }
 
 .email-link {
-  color: #4285f4; /* Instagram's color */
+  color: #4285f4; /* Email's color */
   font-size: 24px; /* Icon size */
   text-decoration: none;
+  padding-right: 20px;
 }
 
 .email-link:hover {
   color: #20437a; /* Darker shade on hover */
+}
+
+.whatsapp-link {
+  font-size: 24px;
+  color: #25D366; /* WhatsApp's color */
+  text-decoration: none;
+}
+
+.whatsapp-link:hover {
+  color: #0f5c2b; /* Darker shade on hover */
 }
 
 @keyframes App-logo-spin {
@@ -169,7 +218,7 @@ footer {
   }
 }
 
-@media (min-width: 320px) and (max-width: 435px) { /* For phones */
+@media (min-width: 320px) and (max-width: 540px) { /* For phones */
   .hamburger-icon .line {
     width: 23px;
     height: 2px;
@@ -188,22 +237,57 @@ footer {
   .App-smallogo-container {
     display: flex;
     justify-content: center;
-    margin-top: 45px;
+    margin-top: 25px;
   }
 
   .App-smallogo {
-    max-width: 70%;
+    max-width: 30%;
+  }
+
+  .container {
+    flex-direction: column; /* Stack the image and text vertically */
+    width: 100%; /* Make the container full width */
+    height: 70%; /* Adjust height automatically */
   }
 
   .rotating-images {
-    height: 50vh; /* Smaller image area */
+    flex: 0;
+    height: 40vh; /* Reduce the height of the image on mobile */
+    margin-bottom: 20px; /* Add some space between the image and text */
+  }
+
+  .message-container {
+    flex: 0;
+    width: 120%; /* Ensure the message container is full width */
+    padding: 0 10px; /* Padding on left and right to avoid overflow */
+    box-sizing: border-box; /* Include padding in width */
+    overflow: visible; /* Ensure no overflow issues */
+  }
+
+  .message-container h2 {
+    font-size: 20px; /* Adjust the title size for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for mobile */
+    margin-left: 160px;
+    word-wrap: break-word; /* Prevent words from breaking out of the container */
+    color: #734C2B; /* Add color back for visibility */
+  }
+
+  .message-container p {
+    font-size: 13px; /* Adjust text size for mobile */
+    line-height: 1.6; /* Improve readability */
+    margin-left: 160px;
+    margin-bottom: 70px; /* Adjust margin for mobile */
+    text-align: center; /* Align text to the left */
+    word-wrap: break-word; /* Ensure text stays within bounds */
+    overflow-wrap: break-word; /* Ensure long words don't overflow */
+    color: #734C2B; /* Add color back for visibility */
   }
 
   footer {
     padding: 5px;
   }
 
-  .phone-link, .instagram-link, .email-link {
+  .phone-link, .instagram-link, .email-link, .whatsapp-link {
     font-size: 25px;
   }
 }
@@ -227,15 +311,50 @@ footer {
   .App-smallogo-container {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .App-smallogo {
-    max-width: 60%;
+    max-width: 50%;
+  }
+
+  .container {
+    flex-direction: column; /* Stack the image and text vertically */
+    width: 100%; /* Make the container full width */
+    height: 75%; /* Adjust height automatically */
   }
 
   .rotating-images {
-    height: 70vh; /* Smaller image area */
+    flex: 0;
+    height: 40vh; /* Reduce the height of the image on mobile */
+    margin-bottom: 40px; /* Add some space between the image and text */
+  }
+
+  .message-container {
+    flex: 0;
+    width: 100%; /* Ensure the message container is full width */
+    padding: 0 10px; /* Padding on left and right to avoid overflow */
+    box-sizing: border-box; /* Include padding in width */
+    overflow: visible; /* Ensure no overflow issues */
+  }
+
+  .message-container h2 {
+    font-size: 24px; /* Adjust the title size for smaller screens */
+    margin-bottom: 20px; /* Adjust margin for mobile */
+    margin-left: 160px;
+    word-wrap: break-word; /* Prevent words from breaking out of the container */
+    color: #734C2B; /* Add color back for visibility */
+  }
+
+  .message-container p {
+    font-size: 16px; /* Adjust text size for mobile */
+    line-height: 1.6; /* Improve readability */
+    margin-left: 160px;
+    margin-bottom: 70px; /* Adjust margin for mobile */
+    text-align: center; /* Align text to the left */
+    word-wrap: break-word; /* Ensure text stays within bounds */
+    overflow-wrap: break-word; /* Ensure long words don't overflow */
+    color: #734C2B; /* Add color back for visibility */
   }
 
   footer {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './about.css';
 
-function Missao() {
+function Historia() {
   return (
   <div className="about-container">A “We Love Coffee” tem por missão levar a nossos clientes uma experiência única dos diferentes sabores de cafés das regiões do Brasil.
   Assim, buscamos os melhores grãos no mercado, com foco na qualidade, para levar o melhor café especial, desde o pé de café até sua xícara.
@@ -10,4 +10,4 @@ function Missao() {
   </div>
 );}
 
-export default Missao;
+export default Historia;

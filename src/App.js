@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // Import Page Components
 import Inicial from './pages/home';
 import Cafes from './pages/types';
-import Missao from './pages/about';
+import Historia from './pages/about';
 import Pedidos from './pages/orders';
 import Contatos from './pages/contact';
 
@@ -37,7 +37,7 @@ function App() {
             <div className="menu-popup">
               <ul>
                 <li><Link to="/home" onClick={handleMenuToggle}><b>Pagina Inicial</b></Link></li>
-                <li><Link to="/about" onClick={handleMenuToggle}><b>Nossa Missao</b></Link></li>
+                <li><Link to="/about" onClick={handleMenuToggle}><b>Nossa Historia</b></Link></li>
                 <li><Link to="/types" onClick={handleMenuToggle}><b>Tipos de Café</b></Link></li>
                 <li><Link to="/orders" onClick={handleMenuToggle}><b>Pedidos</b></Link></li>
                 <li><Link to="/contact" onClick={handleMenuToggle}><b>Contatos</b></Link></li>
@@ -61,7 +61,7 @@ function App() {
             <Route path="/" element={<Inicial />} /> {/* Root route for main page */}
             <Route path="/home" element={<Inicial />} />
             <Route path="/types" element={<Cafes />} />
-            <Route path="/about" element={<Missao />} />
+            <Route path="/about" element={<Historia />} />
             <Route path="/orders" element={<Pedidos />} />
             <Route path="/contact" element={<Contatos />} />
           </Routes>
@@ -82,6 +82,9 @@ function App() {
           </a>
           <a href="mailto:your_email@example.com" className="email-link">
             <i className="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/+1234567890" className="whatsapp-link" target="_blank" rel="noreferrer">
+          <i className="fab fa-whatsapp"></i>
           </a>
         </footer>
       </div>
