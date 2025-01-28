@@ -1,0 +1,331 @@
+/* Centralizes the form */
+.auth-container {
+    display: flex;
+    width: 50%;
+    height: 60vh;
+    margin-top: 50px;
+    background-color: #E8E6CD;
+    overflow: hidden;
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Center contents vertically */
+}
+
+.foreground-image {
+    width: 60%; /* Ensure it fills the entire container */
+    height: 100%; /* Ensure it covers the entire height of the container */
+    border-radius: 0px 80px 80px 0px;
+    z-index: 1; /* Ensure the image is above the form */
+    transition: transform 0.6s ease-in-out, width 0.6s ease-in-out; /* Transition for image movement */
+}
+
+/* Container for the form */
+.form-box {
+    width: 60%;
+    height: 100%;
+    background-color: #E8E6CD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-align: center;
+    padding: 0px;
+    transition: transform 0.6s ease-in-out, visibility 0s 1s;
+}
+
+/* Slide Effect */
+/* When in register-mode (after transition) */
+.auth-container.register-mode .foreground-image {
+    transform: translateX(66%); /* Move image slightly */
+}
+
+/* After transition is complete, change the border-radius */
+.auth-container.register-mode .foreground-image.border-radius-changed {
+    border-radius: 80px 0px 0px 80px;
+}
+
+/* Move the form box to the left */
+.auth-container.register-mode .form-box {
+    transform: translateX(-155%);
+}
+
+/* Input fields */
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+    color: #734C2B;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    color: #734C2B;
+    margin-bottom: 5px;
+}
+
+/* Styling for the login heading */
+.login-mode, .register-mode {
+    color: #734C2B; /* Change this to the color you want for the "Logar" text */
+}
+
+.input-group input {
+    width: 120%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.input-group label {
+    color: #734C2B; /* Change this to the color you want for all labels */
+    font-weight: bold;
+}
+
+/* Buttons */
+.submit-btn,
+.toggle-btn {
+    align-items: center;
+    width: 130%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    background-color: #734C2B;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #aa8565;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    color: #734C2B;
+    margin-top: 30px;
+    text-decoration: underline;
+    text-align: right; /* Align text to the left */
+    padding-right: 160px; /* Optional: Add padding if you want space from the left */
+}
+
+.toggle-btn:hover {
+    color: #aa8565;
+}
+
+@media (min-width: 320px) and (max-width: 540px) { /* For phones */
+    .auth-container {
+        width: 100%;
+        height: auto;
+        position: relative; /* Position relative for proper handling of content */
+        overflow: hidden;
+    }
+
+    /* Hide the image on mobile */
+    .foreground-image {
+        display: none;
+    }
+
+    /* Adjust form box for mobile view */
+    .form-box {
+        width: 80%;
+        height: auto;
+        padding-right: 20px;
+        display: block; /* Ensure the form is visible on mobile */
+        transition: transform 0.3s ease-in-out;  /* Add transition */
+        transform: none !important; /* Force removal of slide effect on mobile */
+    }
+
+    /* Make the form content and buttons take full width */
+    .input-group input,
+    .submit-btn,
+    .toggle-btn {
+        width: 100%;
+    }
+
+    .toggle-btn {
+        text-align: center; /* Align the toggle button text to center */
+    }
+}
+
+/* Add the transition effect */
+.text-switch {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.text-switch.fade-out {
+    opacity: 0;
+}
+
+.text-switch.fade-in {
+    opacity: 1;
+}
+
+/* Slide Effect for larger screens (keeps working as before) */
+.auth-container.register-mode .form-box {
+    transform: translateX(-153%);
+}
+
+
+/* Ensure the form inputs and buttons are styled appropriately */
+.input-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+    color: #734C2B;
+}
+
+.input-group label {
+    display: block;
+    font-size: 16px;
+    color: #734C2B;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%; /* Ensure inputs are full width on mobile */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.submit-btn,
+.toggle-btn {
+    align-items: center;
+    width: 100%; /* Full width buttons */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.submit-btn {
+    background-color: #734C2B;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #aa8565;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    color: #734C2B;
+    margin-top: 30px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.toggle-btn:hover {
+    color: #aa8565;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { /* For tablets */
+    .auth-container {
+        width: 70%; /* Reduce the width for tablet screens */
+        height: 70vh; /* Adjust the height */
+        margin-top: 40px;
+        overflow: hidden;
+    }
+
+    .foreground-image {
+        width: 50%; /* Reduce the width of the image */
+        height: 100%; /* Keep height 100% */
+        border-radius: 0px 50px 50px 0px; /* Adjust border-radius for a more subtle effect */
+        transition: transform 0.6s ease-in-out, width 0.6s ease-in-out;
+    }
+
+    .form-box {
+        width: 50%; /* Reduce width of the form */
+        height: 100%; /* Keep form height 100% */
+        background-color: #E8E6CD;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #333;
+        text-align: center;
+        padding: 20px; /* Add some padding for comfort */
+        transition: transform 0.6s ease-in-out, visibility 0s 1s;
+    }
+
+    /* Slide Effect for tablet size */
+    .auth-container.register-mode .foreground-image {
+        transform: translateX(100%); /* Move image slightly */
+    }
+
+    .auth-container.register-mode .form-box {
+        transform: translateX(-105%); /* Move form box to the left */
+    }
+
+    .input-group {
+        margin-bottom: 1rem;
+        text-align: left;
+        width: 100%;
+        color: #734C2B;
+    }
+
+    .input-group label {
+        display: block;
+        font-size: 16px;
+        color: #734C2B;
+        margin-bottom: 5px;
+    }
+
+    .input-group input {
+        width: 100%; /* Full width of input fields */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #000000;
+    }
+
+    /* Buttons */
+    .submit-btn,
+    .toggle-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s ease;
+    }
+
+    .submit-btn {
+        background-color: #734C2B;
+        color: white;
+    }
+
+    .submit-btn:hover {
+        background-color: #aa8565;
+    }
+
+    .toggle-btn {
+        background-color: transparent;
+        color: #734C2B;
+        margin-top: 20px;
+        text-decoration: underline;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .toggle-btn:hover {
+        color: #aa8565;
+    }
+}
