@@ -1,7 +1,7 @@
 /* Centralizes the form */
 .auth-container {
     display: flex;
-    width: 50%;
+    width: 48%;
     height: 60vh;
     margin-top: 50px;
     background-color: #E8E6CD;
@@ -11,7 +11,7 @@
 }
 
 .foreground-image {
-    width: 60%; /* Ensure it fills the entire container */
+    width: 70%; /* Ensure it fills the entire container */
     height: 100%; /* Ensure it covers the entire height of the container */
     border-radius: 0px 80px 80px 0px;
     z-index: 1; /* Ensure the image is above the form */
@@ -61,26 +61,13 @@
     display: block;
     font-size: 16px;
     color: #734C2B;
+    font-weight: bold;
     margin-bottom: 5px;
 }
 
 /* Styling for the login heading */
 .login-mode, .register-mode {
     color: #734C2B; /* Change this to the color you want for the "Logar" text */
-}
-
-.input-group input {
-    width: 120%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-    color: #000000;
-}
-
-.input-group label {
-    color: #734C2B; /* Change this to the color you want for all labels */
-    font-weight: bold;
 }
 
 /* Buttons */
@@ -153,6 +140,11 @@
     .toggle-btn {
         text-align: center; /* Align the toggle button text to center */
     }
+}
+
+/* Styling for the login heading */
+.login-mode, .register-mode {
+    color: #734C2B; /* Change this to the color you want for the "Logar" text */
 }
 
 /* Add the transition effect */
@@ -236,7 +228,7 @@
 @media (min-width: 768px) and (max-width: 1024px) { /* For tablets */
     .auth-container {
         width: 70%; /* Reduce the width for tablet screens */
-        height: 70vh; /* Adjust the height */
+        height: 50vh; /* Adjust the height */
         margin-top: 40px;
         overflow: hidden;
     }
@@ -275,7 +267,7 @@
         margin-bottom: 1rem;
         text-align: left;
         width: 100%;
-        color: #734C2B;
+        color: #000000;
     }
 
     .input-group label {
@@ -284,6 +276,11 @@
         color: #734C2B;
         margin-bottom: 5px;
     }
+
+    /* Styling for the login heading */
+.login-mode, .register-mode {
+    color: #734C2B; /* Change this to the color you want for the "Logar" text */
+}
 
     .input-group input {
         width: 100%; /* Full width of input fields */
@@ -313,7 +310,7 @@
     }
 
     .submit-btn:hover {
-        background-color: #aa8565;
+        background-color: #7e6f62;
     }
 
     .toggle-btn {
@@ -326,6 +323,6 @@
     }
 
     .toggle-btn:hover {
-        color: #aa8565;
+        color: #7e6f62;
     }
 }
