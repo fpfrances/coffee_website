@@ -95,7 +95,7 @@ function Pedidos() {
         </form>
 
         <button className="toggle-btn" onClick={toggleMode}>
-          {isLogin ? "Ainda nao tem uma conta? Clicka aqui!" : "Ja tem uma conta criada? Clicka aqui!"}
+          {isLogin ? "Ainda nao tem uma conta? Clique aqui!" : "Ja tem uma conta criada? Clique aqui!"}
         </button>
       </div>
     </div>

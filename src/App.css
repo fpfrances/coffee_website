@@ -128,7 +128,7 @@ footer {
 /* Rotating images container with height adjustment */
 .rotating-images {
   flex: 5;
-  height: 65vh; /* Set the height of the rotating image area */
+  height: 65vh; /* Set the height of the rotating ima ge area */
 }
 
 /* Image styling to fit the container */
@@ -136,6 +136,7 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensure the image covers the entire container */
+  border-radius: 50px;  /* Optional rounded corners */
 }
 
 /* Message container */
