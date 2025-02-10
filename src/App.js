@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Inicial from './pages/home';
 import Cafes from './pages/types';
 import Historia from './pages/about';
-import Pedidos from './pages/orders';
+import Pedidos from './pages/login';
 import Contatos from './pages/contact';
 
 function App() {
