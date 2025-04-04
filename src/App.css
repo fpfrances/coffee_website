@@ -57,7 +57,7 @@ header {
 }
 
 .menu-popup ul {
-  list-style: circle;
+  list-style-type: circle;
   margin: 5px;
   padding: 10px;
   color: #734C2B;

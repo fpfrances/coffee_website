@@ -36,11 +36,11 @@ function App() {
           {menuOpen && (
             <div className="menu-popup">
               <ul>
-                <li><Link to="/home" onClick={handleMenuToggle}><b>Pagina Inicial</b></Link></li>
-                <li><Link to="/about" onClick={handleMenuToggle}><b>Nossa Historia</b></Link></li>
-                <li><Link to="/types" onClick={handleMenuToggle}><b>Tipos de Café</b></Link></li>
-                <li><Link to="/orders" onClick={handleMenuToggle}><b>Pedidos</b></Link></li>
-                <li><Link to="/contact" onClick={handleMenuToggle}><b>Contatos</b></Link></li>
+                <li><Link to="/home" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Pagina Inicial</b></Link></li>
+                <li><Link to="/about" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Nossa Historia</b></Link></li>
+                <li><Link to="/types" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Tipos de Café</b></Link></li>
+                <li><Link to="/orders" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Pedidos</b></Link></li>
+                <li><Link to="/contact" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Contatos</b></Link></li>
               </ul>
             </div>
           )}
