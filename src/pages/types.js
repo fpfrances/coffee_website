@@ -66,7 +66,7 @@ function Cafes() {
             Propriedade: Sítio Pinheiro Silvestre<br></br>
             Cafeicultor: Cléufa de Fátima Pinheiro Costa Silvestre<br></br>
             Espécie: Arábica<br></br>
-            Variedade: Catuaí Vermelho<br></br>
+            Variedade: Catucaí Vermelho<br></br>
             Processo: Honey<br></br>
             Altitude: 1350 mts
           </p>

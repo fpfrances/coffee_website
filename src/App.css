@@ -91,10 +91,10 @@ header {
 
 footer {
   position: fixed;
-  bottom: 20px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
-  padding: 10px 0;
+  padding: 0px;
 }
 
 .instagram-link {
