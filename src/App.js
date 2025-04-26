@@ -2,7 +2,7 @@ import './App.css';
 import Fullogo from './assets/full_logo.jpg';
 import Smallogo from './assets/small_logo.jpg';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 
 // Import Page Components
 import Inicial from './pages/home';
@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <Router>
+    <Router basename="/coffee_website">
       <div className="App">
         <header className="App-header">
           {/* Hamburger Menu */}
@@ -58,7 +58,8 @@ function App() {
 
           {/* Page Routes */}
           <Routes>
-            <Route path="/" element={<Inicial />} />
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Inicial />} />
             <Route path="/types" element={<Cafes />} />
             <Route path="/about" element={<Historia />} />
             <Route path="/orders" element={<Pedidos />} />
