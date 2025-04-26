@@ -58,7 +58,7 @@ function App() {
 
           {/* Page Routes */}
           <Routes>
-            <Route path="/home" element={<Inicial />} />
+            <Route path="/" element={<Inicial />} />
             <Route path="/types" element={<Cafes />} />
             <Route path="/about" element={<Historia />} />
             <Route path="/orders" element={<Pedidos />} />
