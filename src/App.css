@@ -11,10 +11,8 @@ body{
   margin-right: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-fullogo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-fullogo {
+  animation: App-logo-spin infinite 20s linear;
 }
 
 header {
@@ -63,9 +61,20 @@ header {
   color: #734C2B;
 }
 
-.menu-popup ul li {
-  padding: 8px 10px;
+.menu-popup ul li a b {
+  display: inline-block;
+  padding: 10px;
   cursor: pointer;
+  color: #734C2B;
+}
+
+.menu-popup ul li {
+  margin-bottom: 10px;
+}
+
+/* Remove extra space after the last item */
+.menu-popup ul li:last-child {
+  margin-bottom: 0;
 }
 
 .menu-popup ul li:hover {
@@ -260,7 +269,7 @@ footer {
 
   .message-container {
     flex: 0;
-    width: 120%; /* Ensure the message container is full width */
+    width: 100%; /* Ensure the message container is full width */
     padding: 0 10px; /* Padding on left and right to avoid overflow */
     box-sizing: border-box; /* Include padding in width */
     overflow: visible; /* Ensure no overflow issues */
@@ -278,7 +287,7 @@ footer {
     font-size: 13px; /* Adjust text size for mobile */
     line-height: 1.6; /* Improve readability */
     margin-left: 160px;
-    margin-bottom: 70px; /* Adjust margin for mobile */
+    margin-bottom: auto; /* Adjust margin for mobile */
     text-align: center; /* Align text to the left */
     word-wrap: break-word; /* Ensure text stays within bounds */
     overflow-wrap: break-word; /* Ensure long words don't overflow */
@@ -352,7 +361,7 @@ footer {
     font-size: 16px; /* Adjust text size for mobile */
     line-height: 1.6; /* Improve readability */
     margin-left: 160px;
-    margin-bottom: 70px; /* Adjust margin for mobile */
+    margin-bottom: auto; /* Adjust margin for mobile */
     text-align: center; /* Align text to the left */
     word-wrap: break-word; /* Ensure text stays within bounds */
     overflow-wrap: break-word; /* Ensure long words don't overflow */
