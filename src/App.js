@@ -69,7 +69,7 @@ function App() {
 
         {/* Footer */}
         <footer className="App-footer">
-          <a href="tel:+1234567890" className="phone-link">
+          <a href="tel:+24999943919" className="phone-link">
             <i className="fas fa-phone"></i>
           </a>
           <a
@@ -80,10 +80,10 @@ function App() {
           >
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="mailto:your_email@example.com" className="email-link">
+          <a href="mailto:welovecoffeebr@gmail.com" className="email-link">
             <i className="fas fa-envelope"></i>
           </a>
-          <a href="https://wa.me/+1234567890" className="whatsapp-link" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/+5524999943919" className="whatsapp-link" target="_blank" rel="noreferrer">
           <i className="fab fa-whatsapp"></i>
           </a>
         </footer>
