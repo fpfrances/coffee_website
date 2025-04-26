@@ -58,7 +58,6 @@ function App() {
 
           {/* Page Routes */}
           <Routes>
-            <Route path="/" element={<Inicial />} /> {/* Root route for main page */}
             <Route path="/home" element={<Inicial />} />
             <Route path="/types" element={<Cafes />} />
             <Route path="/about" element={<Historia />} />
