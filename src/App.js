@@ -86,6 +86,10 @@ function App() {
           <a href="https://wa.me/+5524999943919" className="whatsapp-link" target="_blank" rel="noreferrer">
           <i className="fab fa-whatsapp"></i>
           </a>
+          {/* Rights reserved */}
+          <p className="footer-rights">
+            © {new Date().getFullYear()} We Love Coffee. All rights reserved.
+          </p>
         </footer>
       </div>
     </Router>
