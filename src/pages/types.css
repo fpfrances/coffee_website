@@ -40,7 +40,7 @@ p {
     margin: 30px auto 0;  /* centers the grid container */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px 100px;
+    gap: 40px 100px;
 }
 
 .cafe-card {
@@ -63,18 +63,18 @@ p {
 }
 
 h1 {
-    font-size: 1.5rem;    /* scale down headings */
+    font-size: 1.2rem;    /* scale down headings */
     margin-bottom: 20px;
 }
 
 h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    font-size: 1rem;
+    margin-bottom: 2px;
 }
 
 p1 {
     font-size: 1rem;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -84,14 +84,14 @@ p {
 
 .container-wrap .container-cafes {
     width: 100%;          /* full width of wrapper */
-    margin: 20px auto 0;
+    margin: 10px auto 0;
     display: grid;
     grid-template-columns: 1fr;   /* single column */
-    gap: 20px;                   /* tighter gap */
+    gap: 10px;                   /* tighter gap */
 }
 
 .cafe-card {
-    padding: 10px;
+    padding: 5px;
 }
 }
 
