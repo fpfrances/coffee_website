@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/coffee_website/static/css/main.703cab9a.css",
+    "main.js": "/coffee_website/static/js/main.306ae8ca.js",
+    "static/js/488.55bc8b6c.chunk.js": "/coffee_website/static/js/488.55bc8b6c.chunk.js",
+    "static/media/main_coffee4.jpg": "/coffee_website/static/media/main_coffee4.051b50eedf7b0514a901.jpg",
+    "static/media/main_coffee2.jpg": "/coffee_website/static/media/main_coffee2.42ed57bedf887938bee2.jpg",
+    "static/media/welovecoffee.jpg": "/coffee_website/static/media/welovecoffee.98bc0dc416313ef1fa65.jpg",
+    "static/media/main_coffee1.jpg": "/coffee_website/static/media/main_coffee1.3a0f6b919730574771ec.jpg",
+    "static/media/main_coffee3.jpg": "/coffee_website/static/media/main_coffee3.5d970f0fcbf0a15c245f.jpg",
+    "static/media/colheita.jpg": "/coffee_website/static/media/colheita.5f25c24642f33ca14a7c.jpg",
+    "static/media/cheiro.jpg": "/coffee_website/static/media/cheiro.6393b0402bb70df80b48.jpg",
+    "static/media/graos.jpg": "/coffee_website/static/media/graos.eb219a6d26f8a546de2d.jpg",
+    "static/media/love.jpg": "/coffee_website/static/media/love.71bb5c499030c3f26e7f.jpg",
+    "static/media/full_logo.jpg": "/coffee_website/static/media/full_logo.176b515709108130ce67.jpg",
+    "static/media/small_logo.jpg": "/coffee_website/static/media/small_logo.b080d30bc6d453b876e3.jpg",
+    "index.html": "/coffee_website/index.html",
+    "main.703cab9a.css.map": "/coffee_website/static/css/main.703cab9a.css.map",
+    "main.306ae8ca.js.map": "/coffee_website/static/js/main.306ae8ca.js.map",
+    "488.55bc8b6c.chunk.js.map": "/coffee_website/static/js/488.55bc8b6c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.703cab9a.css",
+    "static/js/main.306ae8ca.js"
+  ]
+}
