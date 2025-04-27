@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import coffeeImage from '../assets/welovecoffee.jpg'; // Import the image
+import coffeeImage from '../assets/welovecoffee.webp'; // Import the image
 import "./login.css";
 
 function Pedidos() {

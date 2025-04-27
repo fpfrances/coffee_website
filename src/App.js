@@ -1,6 +1,6 @@
 import './App.css';
-import Fullogo from './assets/full_logo.jpg';
-import Smallogo from './assets/small_logo.jpg';
+import Fullogo from './assets/full_logo.webp';
+import Smallogo from './assets/small_logo.webp';
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 

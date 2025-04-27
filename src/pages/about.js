@@ -1,9 +1,9 @@
 import './about.css';
 import React, { useState, useEffect } from 'react';
-import Coffee1 from '../assets/cheiro.jpg';
-import Coffee2 from '../assets/colheita.jpg';
-import Coffee3 from '../assets/graos.jpg';
-import Coffee4 from '../assets/love.jpg';
+import Coffee1 from '../assets/cheiro.webp';
+import Coffee2 from '../assets/colheita.webp';
+import Coffee3 from '../assets/graos.webp';
+import Coffee4 from '../assets/love.webp';
 
 // Define images array
 const images = [Coffee1, Coffee2, Coffee3, Coffee4];

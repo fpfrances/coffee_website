@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Coffee1 from '../assets/main_coffee1.jpg';
-import Coffee2 from '../assets/main_coffee2.jpg';
-import Coffee3 from '../assets/main_coffee3.jpg';
-import Coffee4 from '../assets/main_coffee4.jpg';
+import Coffee1 from '../assets/main_coffee1.webp';
+import Coffee2 from '../assets/main_coffee2.webp';
+import Coffee3 from '../assets/main_coffee3.webp';
+import Coffee4 from '../assets/main_coffee4.webp';
 
 // Define images array
 const images = [Coffee1, Coffee2, Coffee3, Coffee4];
