@@ -5,13 +5,11 @@ import Coffee2 from '../assets/colheita.jpg';
 import Coffee3 from '../assets/graos.jpg';
 import Coffee4 from '../assets/love.jpg';
 
+// Define images array
+const images = [Coffee1, Coffee2, Coffee3, Coffee4];
 function Historia() {
-  const [currentImage, setCurrentImage] = useState(Coffee1); // State to store the current image
+  const [currentImage, setCurrentImage] = useState(Coffee1);
 
-  // Array of image sources
-  const images = [Coffee1, Coffee2, Coffee3, Coffee4];
-
-  // Function to rotate images
   const rotateImages = () => {
     setCurrentImage((prevImage) => {
       const currentIndex = images.indexOf(prevImage);
@@ -20,13 +18,16 @@ function Historia() {
     });
   };
 
-  // Rotate images every 5 seconds
   useEffect(() => {
-    const interval = setInterval(rotateImages, 5000);
+    // Preload all images
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
 
-    // Cleanup the interval on component unmount
+    const interval = setInterval(rotateImages, 3000);
     return () => clearInterval(interval);
-  },);
+  }, []);
 
   return (
     <div className="container">
