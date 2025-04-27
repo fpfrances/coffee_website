@@ -8,6 +8,7 @@
 }
 
 h1 {
+    font-size: 24px;
     margin-top: 0px;
     text-align: center;
     color: #734C2B;
@@ -47,7 +48,7 @@ p {
     background-color: #E8E6CD;
     padding: auto;
     border-radius: 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: #734C2B 5px 5px 5px;
     display: flex;
     flex-direction: column;
 }
@@ -55,15 +56,20 @@ p {
 
 /* Phones (320px–540px) */
 @media (min-width: 320px) and (max-width: 540px) {
+    body {
+        height: 100%;           /* Ensure body takes full height */
+        margin: 0;              /* Remove default margin */
+        padding: 0;             /* Remove padding */
+    }
     
 .container-wrap {
     width: 90%;           /* almost full width */
-    margin: 20px auto;    /* center horizontally */
-    padding: 15px;        /* a little less padding */
+    margin: 10px auto 0;
+    padding: 10px;        /* a little less padding */
 }
 
 h1 {
-    font-size: 1.2rem;    /* scale down headings */
+    font-size: 20px; /* Adjust the title size for smaller screens */
     margin-bottom: 20px;
 }
 
@@ -73,21 +79,21 @@ h3 {
 }
 
 p1 {
-    font-size: 1rem;
+    font-size: 16px; /* Adjust text size for mobile */
+    line-height: 1.6; /* Improve readability */
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 0.9rem;
+    font-size: 13px; /* Adjust text size for mobile */
+    line-height: 1.6; /* Improve readability */
     margin-bottom: 15px;
 }
 
 .container-wrap .container-cafes {
-    width: 100%;          /* full width of wrapper */
-    margin: 10px auto 0;
     display: grid;
     grid-template-columns: 1fr;   /* single column */
-    gap: 10px;                   /* tighter gap */
+    gap: 15px;                   /* tighter gap */
 }
 
 .cafe-card {

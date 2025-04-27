@@ -66,7 +66,7 @@
   /* Responsive Design */
   @media (max-width: 1024px) {
     .contatos-container {
-      margin-top: 10px;
+      margin-top: 30px;
       padding: 10px;
       width: 85%;
     }
@@ -74,7 +74,7 @@
     h1 {
       margin-top: 0px;
       text-align: center;
-      font-size: 25px;
+      font-size: 24px;
       color: #734C2B;
       margin-bottom: 10px;
     }

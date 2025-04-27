@@ -1,5 +1,8 @@
 body{
   background-color: #F1E3CB;
+  height: 135vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .App-fullogo {
@@ -230,13 +233,19 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 540px) { /* For phones */
+  html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure body width doesn't overflow */
+    margin: 0; /* Remove any margin that might push content */
+  }
+  
   .hamburger-icon .line {
     width: 23px;
     height: 2px;
   }
 
   .menu-popup {
-    width: 50%;
+    width: 40%;
     font-size: 11px; /* Smaller font for very small screens */
     top: 34px;
   }
@@ -262,17 +271,15 @@ footer {
   }
 
   .rotating-images {
-    flex: 0;
+    width: 100%;
     height: 40vh; /* Reduce the height of the image on mobile */
     margin-bottom: 20px; /* Add some space between the image and text */
   }
 
   .message-container {
-    flex: 0;
     width: 100%; /* Ensure the message container is full width */
     padding: 0 10px; /* Padding on left and right to avoid overflow */
     box-sizing: border-box; /* Include padding in width */
-    overflow: visible; /* Ensure no overflow issues */
   }
 
   .message-container h2 {
@@ -286,16 +293,16 @@ footer {
   .message-container p {
     font-size: 13px; /* Adjust text size for mobile */
     line-height: 1.6; /* Improve readability */
-    margin-left: 160px;
-    margin-bottom: auto; /* Adjust margin for mobile */
-    text-align: center; /* Align text to the left */
+    margin-left: 25%; /* Center the element horizontally by using 5% left margin */
     word-wrap: break-word; /* Ensure text stays within bounds */
     overflow-wrap: break-word; /* Ensure long words don't overflow */
     color: #734C2B; /* Add color back for visibility */
+    text-align: center;
+    width: 90%; /* Use 90% of the width */
   }
 
   footer {
-    padding: 5px;
+    visibility: hidden;
   }
 
   .phone-link, .instagram-link, .email-link, .whatsapp-link {
@@ -304,6 +311,12 @@ footer {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) { /* For tablets */
+  html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%; /* Ensure the body doesn't overflow horizontally */
+    margin: 0; /* Remove any margin that might push content */
+  }
+  
   .hamburger-icon .line {
     width: 23px;
     height: 2px;
@@ -337,6 +350,7 @@ footer {
 
   .rotating-images {
     flex: 0;
+    width: 100%;
     height: 40vh; /* Reduce the height of the image on mobile */
     margin-bottom: 40px; /* Add some space between the image and text */
   }
