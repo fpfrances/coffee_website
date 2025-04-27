@@ -43,7 +43,25 @@ header {
   width: 30px;
   height: 5px;
   background-color: #734C2B;
+  transition: 0.4s;
   border-radius: 2px;
+}
+
+/* When menu is active */
+.hamburger-icon.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(12px, 12px);
+}
+
+.hamburger-icon.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open .line:nth-child(3) {
+  opacity: 0;
+}
+
+.hamburger-icon.open .line:nth-child(4) {
+  transform: rotate(-45deg) translate(9px, -9px);
 }
 
 .menu-popup {
@@ -242,12 +260,31 @@ footer {
   .hamburger-icon .line {
     width: 23px;
     height: 2px;
+    transition: 0.4s;
+  }
+
+  /* When menu is active */
+  .hamburger-icon.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+  }
+
+  .hamburger-icon.open .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open .line:nth-child(3) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open .line:nth-child(4) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   .menu-popup {
     width: 40%;
     font-size: 11px; /* Smaller font for very small screens */
     top: 34px;
+    opacity: 0.7;
   }
 
   .App-fullogo {
@@ -320,12 +357,31 @@ footer {
   .hamburger-icon .line {
     width: 23px;
     height: 2px;
+    transition: 0.4s;
+  }
+
+  /* When menu is active */
+  .hamburger-icon.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+  }
+
+  .hamburger-icon.open .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open .line:nth-child(3) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open .line:nth-child(4) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 
   .menu-popup {
     width: 30%;
     font-size: 12px; /* Smaller font for very small screens */
     top: 40px;
+    opacity: 0.7;
   }
 
   .App-fullogo {

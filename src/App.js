@@ -24,7 +24,7 @@ function App() {
         <header className="App-header">
           {/* Hamburger Menu */}
           <div className="hamburger-menu" onClick={handleMenuToggle}>
-            <div className="hamburger-icon">
+            <div className={`hamburger-icon ${menuOpen ? 'open' : ''}`}>
               <div className="line"></div>
               <div className="line"></div>
               <div className="line"></div>
