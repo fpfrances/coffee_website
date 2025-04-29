@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coffee_website/static/css/main.308e8ab7.css",
-    "main.js": "/coffee_website/static/js/main.bdec2fc2.js",
+    "main.js": "/coffee_website/static/js/main.49618967.js",
     "static/js/488.55bc8b6c.chunk.js": "/coffee_website/static/js/488.55bc8b6c.chunk.js",
     "static/media/main_coffee4.webp": "/coffee_website/static/media/main_coffee4.295b2b3cd1b4207c3e6d.webp",
     "static/media/main_coffee1.webp": "/coffee_website/static/media/main_coffee1.1175c6a05752bed0b14b.webp",
@@ -9,18 +9,18 @@
     "static/media/main_coffee2.webp": "/coffee_website/static/media/main_coffee2.07d9951d5cbb54fc6fa6.webp",
     "static/media/welovecoffee.webp": "/coffee_website/static/media/welovecoffee.8239368877307bbf14af.webp",
     "static/media/main_coffee3.webp": "/coffee_website/static/media/main_coffee3.a663d9a4862375a7a76b.webp",
+    "static/media/full_logo.webp": "/coffee_website/static/media/full_logo.2fc2299c8da13e9b0b14.webp",
     "static/media/graos.webp": "/coffee_website/static/media/graos.ca5b3cc7d877753984a2.webp",
     "static/media/cheiro.webp": "/coffee_website/static/media/cheiro.6b9f5ce7716db6e78fb1.webp",
     "static/media/love.webp": "/coffee_website/static/media/love.c8d1de56a0dde753de1c.webp",
-    "static/media/full_logo.webp": "/coffee_website/static/media/full_logo.08ab5c9638d66f3c7d30.webp",
-    "static/media/small_logo.webp": "/coffee_website/static/media/small_logo.5191951c0c37dc503609.webp",
+    "static/media/small_logo.webp": "/coffee_website/static/media/small_logo.d0c8c849ae5f286704c2.webp",
     "index.html": "/coffee_website/index.html",
     "main.308e8ab7.css.map": "/coffee_website/static/css/main.308e8ab7.css.map",
-    "main.bdec2fc2.js.map": "/coffee_website/static/js/main.bdec2fc2.js.map",
+    "main.49618967.js.map": "/coffee_website/static/js/main.49618967.js.map",
     "488.55bc8b6c.chunk.js.map": "/coffee_website/static/js/488.55bc8b6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.308e8ab7.css",
-    "static/js/main.bdec2fc2.js"
+    "static/js/main.49618967.js"
   ]
 }
