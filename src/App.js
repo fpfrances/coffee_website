@@ -2,10 +2,10 @@ import './App.css';
 import Fullogo from './assets/full_logo.webp';
 import Smallogo from './assets/small_logo.webp';
 import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 // Import Page Components
-import Inicial from './pages/home';
+import Home from './pages/home';
 import Cafes from './pages/types';
 import Historia from './pages/about';
 import Pedidos from './pages/login';
@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <Router basename="/coffee_website">
+    <BrowserRouter basename="/coffee_website">
       <div className="App">
         <header className="App-header">
           {/* Hamburger Menu */}
@@ -36,7 +36,7 @@ function App() {
           {menuOpen && (
             <div className="menu-popup">
               <ul>
-                <li><Link to="/home" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Pagina Inicial</b></Link></li>
+                <li><Link to="/" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Pagina Inicial</b></Link></li>
                 <li><Link to="/about" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Nossa Historia</b></Link></li>
                 <li><Link to="/types" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Tipos de Café</b></Link></li>
                 <li><Link to="/orders" style={{ textDecoration: "none" }} onClick={handleMenuToggle}><b>Pedidos</b></Link></li>
@@ -58,8 +58,7 @@ function App() {
 
           {/* Page Routes */}
           <Routes>
-          <Route path="/" element={<Navigate to="/home" replace />} />
-          <Route path="/home" element={<Inicial />} />
+          <Route path="/" element={<Home />} />
             <Route path="/types" element={<Cafes />} />
             <Route path="/about" element={<Historia />} />
             <Route path="/orders" element={<Pedidos />} />
@@ -92,7 +91,7 @@ function App() {
           </p>
         </footer>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

@@ -40,7 +40,7 @@ p {
     width: 90%;
     margin: 30px auto 0;  /* centers the grid container */
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px 100px;
 }
 
@@ -55,7 +55,7 @@ p {
 
 
 /* Phones (320px–540px) */
-@media (min-width: 320px) and (max-width: 540px) {
+@media (min-width: 320px) and (max-width: 767px) {
     body {
         height: 100%;           /* Ensure body takes full height */
         margin: 0;              /* Remove default margin */

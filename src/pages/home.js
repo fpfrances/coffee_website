@@ -29,7 +29,7 @@ function Inicial() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container-home">
       {/* Rotating Images */}
       <div className="rotating-images">
         <img src={currentImage} className="App-bags" alt="Coffee Bag" />

@@ -1,6 +1,6 @@
 body{
   background-color: #F1E3CB;
-  height: 135vh;
+  min-height: 100vh;
   width: 100%;
   overflow: hidden;
 }
@@ -12,9 +12,6 @@ body{
   margin-left: auto;
   margin-top: 2px;
   margin-right: 5px;
-}
-
-.App-fullogo {
   animation: App-logo-spin infinite 20s linear;
 }
 
@@ -143,8 +140,9 @@ footer {
 }
 
 /* Container to arrange the rotating image and message side by side */
-.container {
+.container-home {
   display: flex;
+  flex-direction: row; /* Default to row on larger screens */
   align-items: center; /* Center vertically */
   position: absolute; /* Use absolute positioning to position the container */
   top: 50%; /* Position the container in the middle of the screen vertically */
@@ -152,6 +150,20 @@ footer {
   transform: translate(-50%, -50%); /* Adjust for true centering */
   width: 90%; /* Optional: Control the width of the container */
   height: 50vh; /* Optional: Control the height of the container */
+  text-align: center; /* Align text to the center */
+}
+
+/* Container to arrange the rotating image and message side by side */
+.container-about {
+  display: flex;
+  flex-direction: row; /* Default to row on larger screens */
+  align-items: center; /* Center vertically */
+  position: absolute; /* Use absolute positioning to position the container */
+  top: 50%; /* Position the container in the middle of the screen vertically */
+  left: 50%; /* Position the container in the middle of the screen horizontally */
+  transform: translate(-50%, -50%); /* Adjust for true centering */
+  width: 90%; /* Optional: Control the width of the container */
+  height: 30vh; /* Optional: Control the height of the container */
   text-align: center; /* Align text to the center */
 }
 
@@ -252,9 +264,9 @@ footer {
 
 @media (min-width: 320px) and (max-width: 540px) { /* For phones */
   html, body {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    width: 100%; /* Ensure body width doesn't overflow */
-    margin: 0; /* Remove any margin that might push content */
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0; 
   }
   
   .hamburger-icon .line {
@@ -284,6 +296,7 @@ footer {
     width: 40%;
     font-size: 11px; /* Smaller font for very small screens */
     top: 34px;
+    left: 0;
   }
 
   .App-fullogo {
@@ -300,7 +313,13 @@ footer {
     max-width: 30%;
   }
 
-  .container {
+  .container-home {
+    flex-direction: column; /* Stack the image and text vertically */
+    width: 100%; /* Make the container full width */
+    height: 70%; /* Adjust height automatically */
+  }
+
+  .container-about {
     flex-direction: column; /* Stack the image and text vertically */
     width: 100%; /* Make the container full width */
     height: 70%; /* Adjust height automatically */
@@ -338,13 +357,118 @@ footer {
   }
 
   footer {
-    visibility: hidden;
+    visibility: collapse;
   }
 
   .phone-link, .instagram-link, .email-link, .whatsapp-link {
     font-size: 25px;
   }
 }
+
+
+@media (min-width: 540px) and (max-width: 768px) { /* For phones */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0; 
+  }
+  
+  .hamburger-icon .line {
+    width: 23px;
+    height: 2px;
+    transition: 0.4s;
+  }
+
+  /* When menu is active */
+  .hamburger-icon.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(9px, 9px);
+  }
+
+  .hamburger-icon.open .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open .line:nth-child(3) {
+    opacity: 0;
+  }
+
+  .hamburger-icon.open .line:nth-child(4) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .menu-popup {
+    width: 30%;
+    font-size: 14px; /* Smaller font for very small screens */
+    top: 4%;
+    left: 0;
+  }
+
+  .App-fullogo {
+    height: 8vmin;
+  }
+
+  .App-smallogo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .App-smallogo {
+    max-width: 30%;
+  }
+
+  .container-home {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .container-about {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 90px; /* Adjust as needed */
+  height: auto;
+  }
+
+  .rotating-images {
+    width: 100%;
+    margin-bottom: 30px; /* Add some space between the image and text */
+  }
+
+  .message-container {
+    width: 90%; /* Ensure the message container is full width */
+  }
+
+  .message-container h2 {
+    font-size: 20px; /* Adjust the title size for smaller screens */
+    margin-bottom: 10px; /* Adjust margin for mobile */
+    margin-left: 160px;
+    word-wrap: break-word; /* Prevent words from breaking out of the container */
+    color: #734C2B; /* Add color back for visibility */
+  }
+
+  .message-container p {
+    font-size: 15px; /* Adjust text size for mobile */
+    line-height: 1.6; /* Improve readability */
+    margin-left: 20%;
+    word-wrap: break-word; /* Ensure text stays within bounds */
+    overflow-wrap: break-word; /* Ensure long words don't overflow */
+    color: #734C2B; /* Add color back for visibility */
+    text-align: center;
+    width: 90%; /* Use 90% of the width */
+  }
+
+  footer {
+    visibility: collapse;
+  }
+
+  .phone-link, .instagram-link, .email-link, .whatsapp-link {
+    font-size: 18px;
+  }
+}
+
 
 @media (min-width: 768px) and (max-width: 1024px) { /* For tablets */
   html, body {
@@ -377,13 +501,14 @@ footer {
   }
 
   .menu-popup {
-    width: 30%;
-    font-size: 12px; /* Smaller font for very small screens */
-    top: 40px;
+    width: 25%;
+    font-size: 15px; /* Smaller font for very small screens */
+    top: 4%;
+    left: 0;
   }
 
   .App-fullogo {
-    height: 5vmin;
+    height: 6vmin;
   }
 
   .App-smallogo-container {
@@ -396,10 +521,18 @@ footer {
     max-width: 50%;
   }
 
-  .container {
-    flex-direction: column; /* Stack the image and text vertically */
-    width: 100%; /* Make the container full width */
-    height: 75%; /* Adjust height automatically */
+  .container-home {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .container-about {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: 75%;
   }
 
   .rotating-images {
@@ -437,7 +570,7 @@ footer {
   }
 
   footer {
-    padding: 5px;
+    visibility: collapse;
   }
 
   .phone-link, .instagram-link, .email-link {
