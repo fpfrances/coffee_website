@@ -333,31 +333,38 @@ footer {
   }
 
   .message-container {
-    width: 100%; /* Ensure the message container is full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
   .message-container h2 {
     font-size: 20px; /* Adjust the title size for smaller screens */
     margin-bottom: 10px; /* Adjust margin for mobile */
-    margin-left: 160px;
+    margin: 0 0 10px 0;
     word-wrap: break-word; /* Prevent words from breaking out of the container */
     color: #734C2B; /* Add color back for visibility */
+    text-align: center;
   }
 
   .message-container p {
     font-size: 13px; /* Adjust text size for mobile */
     line-height: 1.6; /* Improve readability */
-    margin-left: 25%; /* Center the element horizontally by using 5% left margin */
+    margin: 0;
+    width: 100%;
     word-wrap: break-word; /* Ensure text stays within bounds */
     overflow-wrap: break-word; /* Ensure long words don't overflow */
     color: #734C2B; /* Add color back for visibility */
     text-align: center;
-    width: 90%; /* Use 90% of the width */
   }
 
   footer {
-    visibility: collapse;
+    display: none;
   }
 
   .phone-link, .instagram-link, .email-link, .whatsapp-link {
@@ -438,21 +445,27 @@ footer {
   }
 
   .message-container {
-    width: 90%; /* Ensure the message container is full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 600px; /* Optional: limits width on large screens */
+    margin: 0 auto; /* This centers the container horizontally */
+    padding: 20px;
   }
 
   .message-container h2 {
     font-size: 20px; /* Adjust the title size for smaller screens */
     margin-bottom: 10px; /* Adjust margin for mobile */
-    margin-left: 160px;
     word-wrap: break-word; /* Prevent words from breaking out of the container */
     color: #734C2B; /* Add color back for visibility */
+    text-align: center;
   }
 
   .message-container p {
     font-size: 15px; /* Adjust text size for mobile */
     line-height: 1.6; /* Improve readability */
-    margin-left: 20%;
     word-wrap: break-word; /* Ensure text stays within bounds */
     overflow-wrap: break-word; /* Ensure long words don't overflow */
     color: #734C2B; /* Add color back for visibility */
@@ -461,7 +474,7 @@ footer {
   }
 
   footer {
-    visibility: collapse;
+    display: none;
   }
 
   .phone-link, .instagram-link, .email-link, .whatsapp-link {
@@ -543,26 +556,32 @@ footer {
   }
 
   .message-container {
-    flex: 0;
-    width: 100%; /* Ensure the message container is full width */
-    padding: 0 10px; /* Padding on left and right to avoid overflow */
-    box-sizing: border-box; /* Include padding in width */
-    overflow: visible; /* Ensure no overflow issues */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    max-width: 1000px; /* Optional: limits width on large screens */
+    border-radius: 10px;
+    margin: 0 auto;
   }
 
   .message-container h2 {
     font-size: 24px; /* Adjust the title size for smaller screens */
-    margin-bottom: 20px; /* Adjust margin for mobile */
-    margin-left: 160px;
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0;
+    text-align: center;
     word-wrap: break-word; /* Prevent words from breaking out of the container */
     color: #734C2B; /* Add color back for visibility */
+    width: 100%; /* Ensures text takes full width of container */
   }
 
   .message-container p {
-    font-size: 16px; /* Adjust text size for mobile */
+    font-size: 20px; /* Adjust text size for mobile */
     line-height: 1.6; /* Improve readability */
-    margin-left: 160px;
-    margin-bottom: auto; /* Adjust margin for mobile */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0;
+    width: 100%; /* Ensures text takes full width of container */
     text-align: center; /* Align text to the left */
     word-wrap: break-word; /* Ensure text stays within bounds */
     overflow-wrap: break-word; /* Ensure long words don't overflow */
@@ -570,7 +589,7 @@ footer {
   }
 
   footer {
-    visibility: collapse;
+    display: none;
   }
 
   .phone-link, .instagram-link, .email-link {
