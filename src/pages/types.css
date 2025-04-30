@@ -54,7 +54,7 @@ p {
 }
 
 
-/* Phones (320px–540px) */
+/* Phones (320px–767px) */
 @media (min-width: 320px) and (max-width: 767px) {
     body {
         height: 100%;           /* Ensure body takes full height */

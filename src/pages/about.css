@@ -10,11 +10,3 @@
     color: #734C2B;
     box-shadow: 15px 15px 6px rgba(0, 0, 0, 0.1);
   }
-
-   /* Responsive Design */
-   @media (max-width: 768px) {
-    .about-container {
-      margin-top: 30px;
-      width: 80%;
-    }
-}

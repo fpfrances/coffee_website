@@ -187,7 +187,7 @@ footer {
   margin-right: 150px;
 }
 
-/* Optional: Adjust text styling */
+/* Adjust text styling */
 .message-container h2 {
   font-size: 30px;
   color: #734C2B;
@@ -262,7 +262,7 @@ footer {
   }
 }
 
-@media (min-width: 320px) and (max-width: 540px) { /* For phones */
+@media (min-width: 320px) and (max-width: 539px) { /* For phones */
   html, body {
     overflow-x: hidden;
     width: 100%;
@@ -305,6 +305,7 @@ footer {
 
   .App-smallogo-container {
     display: flex;
+    width: 100%;
     justify-content: center;
     margin-top: 25px;
   }
@@ -333,8 +334,7 @@ footer {
 
   .message-container {
     width: 100%; /* Ensure the message container is full width */
-    padding: 0 10px; /* Padding on left and right to avoid overflow */
-    box-sizing: border-box; /* Include padding in width */
+    text-align: center;
   }
 
   .message-container h2 {
@@ -366,7 +366,7 @@ footer {
 }
 
 
-@media (min-width: 540px) and (max-width: 768px) { /* For phones */
+@media (min-width: 540px) and (max-width: 767px) { /* For phones */
   html, body {
     overflow-x: hidden;
     width: 100%;
@@ -421,19 +421,19 @@ footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto;
+    height: 75%;
   }
 
   .container-about {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 90px; /* Adjust as needed */
-  height: auto;
+  height: 75%;
   }
 
   .rotating-images {
     width: 100%;
+    height: 38vh;
     margin-bottom: 30px; /* Add some space between the image and text */
   }
 
@@ -525,7 +525,7 @@ footer {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    height: auto;
+    height: 75%;
   }
 
   .container-about {
