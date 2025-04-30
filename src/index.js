@@ -6,10 +6,14 @@ import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// Define basename
+const basename = '/coffee_website';
+
 const redirectPath = sessionStorage.redirect;
 if (redirectPath) {
   sessionStorage.removeItem("redirect");
-  window.history.replaceState(null, "", redirectPath);
+  const fullRedirectPath = `${basename}${redirectPath}`;
+  window.history.replaceState(null, "", fullRedirectPath);
 }
 
 root.render(
