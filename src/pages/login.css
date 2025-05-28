@@ -226,11 +226,11 @@
     color: #aa8565;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) { /* For tablets */
+@media (min-width: 768px) and (max-width: 1366px) { /* For tablets */
     .auth-container {
-        width: 70%; /* Reduce the width for tablet screens */
-        height: 50vh; /* Adjust the height */
-        margin-top: 40px;
+        width: 80%; /* Reduce the width for tablet screens */
+        height: 67vh; /* Adjust the height */
+        margin-top: 20px;
         overflow: hidden;
     }
 
@@ -242,7 +242,7 @@
     }
 
     .form-box {
-        width: 50%; /* Reduce width of the form */
+        width: 45%; /* Reduce width of the form */
         height: 100%; /* Keep form height 100% */
         background-color: #E8E6CD;
         display: flex;
@@ -261,7 +261,7 @@
     }
 
     .auth-container.register-mode .form-box {
-        transform: translateX(-105%); /* Move form box to the left */
+        transform: translateX(-110%); /* Move form box to the left */
     }
 
     .input-group {
@@ -317,7 +317,7 @@
     .toggle-btn {
         background-color: transparent;
         color: #734C2B;
-        margin-top: 20px;
+        margin-top: 10px;
         text-decoration: underline;
         text-align: center;
         padding: 10px;
