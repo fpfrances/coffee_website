@@ -2,7 +2,8 @@ body{
   background-color: #F1E3CB;
   min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto; /* or just use `overflow: auto;` */
 }
 
 .App-fullogo {
@@ -100,19 +101,27 @@ header {
   border-radius: 20px;
 }
 
+/* Make the app container a column flexbox filling full viewport height */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .App-webpage {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center; /* Horizontally centers child elements */
   justify-content: flex-start; /* Adjusts vertical alignment */
 }
 
-footer {
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
+/* Footer styles */
+.App-footer {
+  background-color: #F1E3CB;
+  color: #fff;
+  padding: 1rem 0;
   text-align: center;
-  padding: 0px;
 }
 
 .instagram-link {
@@ -253,6 +262,8 @@ footer {
   color: #0f5c2b; /* Darker shade on hover */
 }
 
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -364,7 +375,7 @@ footer {
   }
 
   footer {
-    display: none;
+    display: visible;
   }
 
   .phone-link, .instagram-link, .email-link, .whatsapp-link {
@@ -474,7 +485,7 @@ footer {
   }
 
   footer {
-    display: none;
+    display: visible;
   }
 
   .phone-link, .instagram-link, .email-link, .whatsapp-link {
@@ -589,7 +600,7 @@ footer {
   }
 
   footer {
-    display: none;
+    display: visible;
   }
 
   .phone-link, .instagram-link, .email-link {
