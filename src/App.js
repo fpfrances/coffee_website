@@ -82,7 +82,7 @@ function App() {
           <a href="mailto:welovecoffeebr@gmail.com" className="email-link">
             <i className="fas fa-envelope"></i>
           </a>
-          <a href="https://wa.me/+5524999943919" className="whatsapp-link" target="_blank" rel="noreferrer">
+          <a href="https://wa.me/5524999943919" className="whatsapp-link" target="_blank" rel="noreferrer">
           <i className="fab fa-whatsapp"></i>
           </a>
           {/* Rights reserved */}
