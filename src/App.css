@@ -1,9 +1,9 @@
-body{
+html, body{
   background-color: #F1E3CB;
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: auto; /* or just use `overflow: auto;` */
+  overflow-y: auto;
 }
 
 .App-fullogo {
@@ -148,32 +148,17 @@ header {
   border-radius: 10px; /* Optional rounded corners */
 }
 
-/* Container to arrange the rotating image and message side by side */
-.container-home {
-  display: flex;
-  flex-direction: row; /* Default to row on larger screens */
-  align-items: center; /* Center vertically */
-  position: absolute; /* Use absolute positioning to position the container */
-  top: 50%; /* Position the container in the middle of the screen vertically */
-  left: 50%; /* Position the container in the middle of the screen horizontally */
-  transform: translate(-50%, -50%); /* Adjust for true centering */
-  width: 90%; /* Optional: Control the width of the container */
-  height: 50vh; /* Optional: Control the height of the container */
-  text-align: center; /* Align text to the center */
-}
-
-/* Container to arrange the rotating image and message side by side */
+.container-home,
 .container-about {
   display: flex;
-  flex-direction: row; /* Default to row on larger screens */
-  align-items: center; /* Center vertically */
-  position: absolute; /* Use absolute positioning to position the container */
-  top: 50%; /* Position the container in the middle of the screen vertically */
-  left: 50%; /* Position the container in the middle of the screen horizontally */
-  transform: translate(-50%, -50%); /* Adjust for true centering */
-  width: 90%; /* Optional: Control the width of the container */
-  height: 30vh; /* Optional: Control the height of the container */
-  text-align: center; /* Align text to the center */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: auto; /* Let content determine height */
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
 }
 
 /* Rotating images container with height adjustment */
@@ -494,7 +479,7 @@ header {
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) { /* For tablets */
+@media (min-width: 768px) and (max-width: 1366px) { /* For tablets */
   html, body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     width: 100%; /* Ensure the body doesn't overflow horizontally */
