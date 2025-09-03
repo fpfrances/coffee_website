@@ -11,7 +11,7 @@
 }
 
 .foreground-image {
-    width: 100%; /* Ensure it fills the entire container */
+    width: 60%; /* Ensure it fills the entire container */
     height: 100%; /* Ensure it covers the entire height of the container */
     border-radius: 0px 80px 80px 0px;
     z-index: 1; /* Ensure the image is above the form */
